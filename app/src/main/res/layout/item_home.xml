@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:gravity="center_vertical">
+    <TextView
+        android:layout_marginLeft="30dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="15sp"
+        android:text="15:44"/>
+    <FrameLayout
+        android:layout_width="10dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        >
+        <View android:layout_height="50dp"
+            android:layout_width="2dp"
+            android:background="#33afbcdb"
+            android:layout_gravity="center">
+        </View>
+        <View
+            android:layout_height="6dp"
+            android:layout_width="6dp"
+            android:background="@drawable/yuan_shap"
+            android:layout_gravity="center"></View>
+    </FrameLayout>
+    <ImageView
+        android:id="@+id/id_img"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@mipmap/image1"
+        />
+    <TextView
+        android:id="@+id/id_num"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center_vertical"
+        android:layout_marginLeft="20dp"
+        android:textSize="18sp"
+        android:text="1" />
+</LinearLayout>

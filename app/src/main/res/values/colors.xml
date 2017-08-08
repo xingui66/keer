@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="gongjulan">#a7d84c</color>
+
+    <color name="sample_focused">#f3f3ff</color>
+    <color name="sample_disabled_pressed">#FFFAFA</color>
+    <color name="sample_disabled_not_pressed">#FFFFFF</color>
+    <color name="sample_default">#FFFFFF</color>
+
+
+</resources>
