@@ -4,7 +4,6 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
-import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.Toast;
 
@@ -14,6 +13,9 @@ import com.google.android.flexbox.FlexWrap;
 import com.google.android.flexbox.FlexboxLayoutManager;
 import com.xingui.keer.R;
 import com.xingui.keer.bean.LoginBean;
+import com.xingui.keer.component.DaggerLoginComponet;
+import com.xingui.keer.component.LoginComponet;
+import com.xingui.keer.module.LoginModule;
 import com.xingui.keer.presenter.LoginPresenter;
 import com.xingui.keer.ui.adapter.HomeAdapter;
 import com.xingui.keer.view.KeerView;
@@ -21,20 +23,29 @@ import com.xingui.keer.view.KeerView;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.inject.Inject;
+
 public class MainActivity extends AppCompatActivity implements KeerView.LoginView {
 
+    @Inject
+    public LoginPresenter loginPresenter;
+
     private Button login;
-    private LoginPresenter loginPresenter;
     private RecyclerView recyclerview;
     private List<String> mDatas = new ArrayList<String>();
-    private HomeAdapter mAdapter;
+    //private HomeAdapter mAdapter;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        getWindow().addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);//半透明工具栏
+        //getWindow().addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);//半透明工具栏
         setContentView(R.layout.activity_main);
         //1.登录功能+
-        loginPresenter=new LoginPresenter(this);
+        //loginPresenter=new LoginPresenter(this);
+        LoginComponet loginComponet =DaggerLoginComponet.builder()
+                                                           .loginModule(new LoginModule(this))
+                                                           .build();
+        loginComponet.inject(this);
+
         login=(Button)findViewById(R.id.login);
         login.setOnClickListener(new View.OnClickListener() {
             @Override
