@@ -1,4 +1,27 @@
 <resources>
     <string name="app_name">keer</string>
     <string name="title_activity_main2">Main2Activity</string>
+    <string name="example_title">This is an awesome title</string>
+    <string name="example_subtitle">I\'m a cool subtitle, larger than the title</string>
+
+    <string name="text_header">Text</string>
+    <string name="flexible_title">Flexible space</string>
+
+    <string name="header_about">About</string>
+    <string name="header_examples">Examples</string>
+
+    <string name="item_flexible_space_example">Flexible space example</string>
+    <string name="item_simple_coordinator_example">Simple coordinator example</string>
+    <string name="item_googleio_example">Google IO Detail example</string>
+    <string name="item_materialup_example">Material up profile example</string>
+
+    <string name="oneday">
+        湫，电影《大鱼海棠》中人物。
+        我会化作人间的风雨陪在你身边
+        “我想忘记一些事情，可怎么也忘不了”
+“忘不了就别忘了，真正的忘记是不需要努力的”
+        你相信有永恒的爱吗 就像星星一样
+        “你以为你接受的是谁的爱？你接受的是一个天神的爱！他将背叛所有的神灵去爱你！为你忍受一切痛苦，以此带给你快乐！”——湫。 为你背叛所有的神灵，为你忍受一切痛苦。 这就是湫，是为椿成年特意从人间赶回来，在屋顶对她说我等你回来的少年；是为了保护心爱的姑娘独自与双头蛇搏斗，命悬一线的傻瓜；是为了她不顾一切打开海天之门，用自己的生命成全他们，最后换来一场八千年的孤独的可怜虫。有些人，宛如神灵，却爱如蝼蚁！这个执着的有点傻气的少年，这个简单却温暖的少年，让人怎么忍心看着他颤抖伸出的手没有得到回
+与椿从小一起长大，自幼没有父母，由奶奶抚养长大，掌管秋风。他从小缺少管束，天不怕地不怕，可在内心深处，却最害怕让他所爱的人受苦。
+    </string>
 </resources>

@@ -1,6 +1,7 @@
 package com.xingui.keer.ui;
 
 import android.os.Bundle;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
@@ -17,6 +18,7 @@ import com.xingui.keer.component.DaggerLoginComponet;
 import com.xingui.keer.component.LoginComponet;
 import com.xingui.keer.module.LoginModule;
 import com.xingui.keer.presenter.LoginPresenter;
+import com.xingui.keer.ui.activity.DynamicDetailActivity;
 import com.xingui.keer.ui.adapter.HomeAdapter;
 import com.xingui.keer.view.KeerView;
 
@@ -32,6 +34,7 @@ public class MainActivity extends AppCompatActivity implements KeerView.LoginVie
 
     private Button login;
     private RecyclerView recyclerview;
+    private FloatingActionButton fab_main;
     private List<String> mDatas = new ArrayList<String>();
     //private HomeAdapter mAdapter;
     @Override
@@ -80,6 +83,15 @@ public class MainActivity extends AppCompatActivity implements KeerView.LoginVie
         recyclerview.setAdapter(new HomeAdapter(this,mDatas));
         //时间轴-
 
+        //页面跳转+
+        fab_main=(FloatingActionButton) findViewById(R.id.fab_main);
+        fab_main.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                DynamicDetailActivity.start(MainActivity.this);
+            }
+        });
+        //页面跳转-
     }
 
     @Override
